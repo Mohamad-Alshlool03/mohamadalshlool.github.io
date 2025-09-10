@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title data-i18n="title">Page Not Found — Mohamad Khaled Al-Shlool</title>
+  <meta name="description" content="Sorry, the page you’re looking for doesn’t exist.">
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <style>
+    .center{max-width:720px;margin-inline:auto;text-align:center;padding:40px 16px}
+    .actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:18px}
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1><i class="fas fa-triangle-exclamation"></i> <span data-i18n="nf_h1">Page Not Found</span></h1>
+      <div class="hero-actions">
+        <div class="right" style="margin-inline-start:auto;display:inline-flex;gap:10px">
+          <button id="langToggle" class="btn btn-outline"><i class="fas fa-globe"></i> AR / EN</button>
+          <button id="themeToggle" class="btn btn-outline"><i class="fas fa-moon"></i> <span data-i18n="theme">Theme</span></button>
+        </div>
+      </div>
+      <nav class="top-nav" style="margin-top:16px">
+        <a href="index.html"><i class="fas fa-user"></i> <span data-i18n="nav_about">About</span></a>
+        <a href="Portfolio.html"><i class="fas fa-briefcase"></i> <span data-i18n="nav_portfolio">Portfolio</span></a>
+        <a href="contact.html"><i class="fas fa-envelope"></i> <span data-i18n="nav_contact">Contact</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container center">
+    <p data-i18n="nf_p">Looks like the link is incorrect. Use the links below to get back.</p>
+    <div class="actions">
+      <a class="btn" href="index.html"><i class="fas fa-home"></i> Home</a>
+      <a class="btn btn-outline" href="Portfolio.html"><i class="fas fa-briefcase"></i> Portfolio</a>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="index.html"><span data-i18n="nav_about">About</span></a> •
+      <a href="Portfolio.html"><span data-i18n="nav_portfolio">Portfolio</span></a> •
+      <a href="contact.html"><span data-i18n="nav_contact">Contact</span></a>
+    </div>
+    <p>&copy; 2025 Mohamad Khaled Al-Shlool. <span data-i18n="footer_rights">All rights reserved.</span></p>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
