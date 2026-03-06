@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://mohamad-alshlool03.github.io/mohamadalshlool.github.io/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://mohamad-alshlool03.github.io/mohamadalshlool.github.io/Portfolio.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mohamad-alshlool03.github.io/mohamadalshlool.github.io/contact.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Services -->
+  <url>
+    <loc>https://mohamad-alshlool03.github.io/mohamadalshlool.github.io/services/powerpoint.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mohamad-alshlool03.github.io/mohamadalshlool.github.io/services/social-posts.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mohamad-alshlool03.github.io/mohamadalshlool.github.io/services/portfolio-website.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

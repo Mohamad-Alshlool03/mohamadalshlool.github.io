@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>تواصل معي | محمد خالد الشلول</title>
+  <meta name="description" content="تواصل مع محمد خالد الشلول - طالب أمن سيبراني (سنة رابعة) ومطور مواقع ويب. للاستفسار عن التدريب، التعاون، أو مشاريع تطوير المواقع." />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    html[dir="rtl"] body { font-family: "Segoe UI", Tahoma, Arial, sans-serif; }
+
+    /* إلغاء إبراز Portfolio الافتراضي الموجود في style.css على هذه الصفحة */
+    header.hero .top-nav a[href*="Portfolio.html"]{
+      background:rgba(255,255,255,.14) !important;
+      color:#fff !important;
+      border-color:rgba(255,255,255,.25) !important;
+      font-weight:500 !important;
+      box-shadow:none !important;
+    }
+    /* إبراز صفحة التواصل */
+    header.hero .top-nav a[href="contact.html"]{
+      background:#fff !important;
+      color:var(--brand) !important;
+      border-color:#fff !important;
+      font-weight:700;
+      box-shadow:0 6px 16px rgba(0,0,0,.12);
+    }
+
+    .hero-sub{
+      display:flex;gap:10px;flex-wrap:wrap;justify-content:center;align-items:center;margin-top:10px
+    }
+    .hero-badge{
+      display:inline-flex;align-items:center;gap:8px;
+      background:rgba(255,255,255,.14);
+      border:1px solid rgba(255,255,255,.25);
+      color:#fff;
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:.95rem;
+    }
+
+    .hero-actions{
+      display:flex;align-items:center;gap:10px;justify-content:center;margin-top:14px;flex-wrap:wrap
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
+    }
+
+    .contact-card{
+      background:var(--card-bg);
+      border:1px solid #e6ecf3;
+      border-radius:14px;
+      padding:14px;
+      box-shadow:var(--shadow);
+    }
+    html[data-theme="dark"] .contact-card{
+      border-color:#2a3153;
+    }
+
+    .contact-card h4{
+      margin:.1rem 0 .5rem;
+      font-size:1rem;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+
+    .contact-card p{
+      margin:.15rem 0;
+      color:var(--ink-soft);
+      line-height:1.6;
+    }
+
+    .contact-card a{
+      word-break:break-word;
+      font-weight:600;
+    }
+
+    .mini-note{
+      color:var(--ink-soft);
+      font-size:.93rem;
+      margin-top:6px;
+    }
+
+    .focus-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:12px;
+      margin-top:8px;
+    }
+
+    .focus-box{
+      border:1px solid #e5ebf3;
+      border-radius:12px;
+      padding:12px;
+      background:rgba(26,188,156,.04);
+    }
+    html[data-theme="dark"] .focus-box{
+      background:#11162a;
+      border-color:#2a3153;
+    }
+
+    .focus-box h4{ margin:.1rem 0 .45rem; }
+    .focus-box ul{ margin:0; padding-inline-start:18px; }
+    .focus-box li{ margin:.25rem 0; }
+
+    .quick-form{
+      display:grid;
+      gap:10px;
+      margin-top:10px;
+    }
+    .quick-form .row2{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:10px;
+    }
+
+    .quick-form input,
+    .quick-form textarea,
+    .quick-form select{
+      width:100%;
+      border:1px solid #dbe4ee;
+      background:#fff;
+      color:#222;
+      border-radius:10px;
+      padding:11px 12px;
+      font:inherit;
+      outline:none;
+    }
+    .quick-form textarea{
+      min-height:130px;
+      resize:vertical;
+    }
+    .quick-form input:focus,
+    .quick-form textarea:focus,
+    .quick-form select:focus{
+      border-color:#1abc9c;
+      box-shadow:0 0 0 3px rgba(26,188,156,.12);
+    }
+
+    html[data-theme="dark"] .quick-form input,
+    html[data-theme="dark"] .quick-form textarea,
+    html[data-theme="dark"] .quick-form select{
+      background:#0f1426;
+      color:#eef2ff;
+      border-color:#2a3153;
+    }
+
+    .form-actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
+
+    .social-links{
+      display:flex;gap:10px;flex-wrap:wrap;margin-top:10px
+    }
+    .social-links a{
+      display:inline-flex;align-items:center;gap:8px;
+      border:1px solid #dfe7f1;border-radius:999px;padding:8px 12px;text-decoration:none;
+      background:#fff;
+    }
+    html[data-theme="dark"] .social-links a{
+      background:#11162a;border-color:#2a3153;
+    }
+
+    .helper-box{
+      border:1px dashed rgba(41,128,185,.35);
+      background:rgba(41,128,185,.04);
+      border-radius:12px;
+      padding:12px;
+    }
+
+    .helper-box ul{
+      margin:.35rem 0 0;
+      padding-inline-start:18px;
+    }
+
+    @media (max-width: 900px){
+      .contact-grid,.focus-grid{grid-template-columns:1fr}
+    }
+    @media (max-width: 700px){
+      .quick-form .row2{grid-template-columns:1fr}
+      .hero h1{font-size:1.6rem}
+      .hero h2{font-size:1rem}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="container">
+      <h1><i class="fas fa-paper-plane"></i> تواصل معي</h1>
+      <h2>محمد خالد الشلول — طالب أمن سيبراني (سنة رابعة) | مطور مواقع ويب</h2>
+
+      <div class="hero-sub">
+        <span class="hero-badge"><i class="fas fa-shield-halved"></i> اهتمام رئيسي: الأمن السيبراني</span>
+        <span class="hero-badge"><i class="fas fa-certificate"></i> eJPT v2 / Azure AI / Cisco Ethical Hacker</span>
+        <span class="hero-badge"><i class="fas fa-code"></i> تطوير مواقع ويب متجاوبة</span>
+      </div>
+
+      <div class="hero-actions">
+        <button id="themeToggle" class="btn btn-outline" type="button">
+          <i class="fas fa-moon"></i> تبديل الثيم
+        </button>
+        <a class="btn" href="index.html"><i class="fas fa-arrow-right"></i> الرجوع للنبذة</a>
+        <a class="btn btn-outline" href="Portfolio.html"><i class="fas fa-briefcase"></i> أعمال الويب</a>
+      </div>
+
+      <nav class="top-nav" aria-label="Main Navigation" style="margin-top:16px">
+        <a href="index.html"><i class="fas fa-user"></i> نبذة</a>
+        <a href="Portfolio.html"><i class="fas fa-briefcase"></i> الأعمال</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i> التواصل</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- قنوات التواصل -->
+    <section class="card">
+      <h3><i class="fas fa-address-book"></i> معلومات التواصل</h3>
+      <p class="mini-note">
+        متاح للاستفسارات المتعلقة بفرص التدريب، التعاون التقني، أو طلب تطوير موقع ويب.
+      </p>
+
+      <div class="contact-grid" style="margin-top:10px">
+
+        <div class="contact-card">
+          <h4><i class="fas fa-phone"></i> الهاتف</h4>
+          <p>للتواصل المباشر:</p>
+          <a href="tel:0790986908">0790986908</a>
+        </div>
+
+        <div class="contact-card">
+          <h4><i class="fab fa-whatsapp"></i> واتساب</h4>
+          <p>أسرع طريقة للتواصل بخصوص الاستفسار أو الطلب:</p>
+          <a href="https://wa.me/962790986908" target="_blank" rel="noopener">فتح محادثة واتساب</a>
+        </div>
+
+        <div class="contact-card">
+          <h4><i class="fas fa-envelope"></i> البريد الشخصي</h4>
+          <p>للتواصل المهني والمراسلات العامة:</p>
+          <a href="mailto:mshlool684@gmail.com">mshlool684@gmail.com</a>
+        </div>
+
+        <div class="contact-card">
+          <h4><i class="fas fa-envelope-open-text"></i> البريد الجامعي</h4>
+          <p>للتواصل الأكاديمي أو ما يرتبط بالدراسة:</p>
+          <a href="mailto:mkalshlool21@cit.just.edu.jo">mkalshlool21@cit.just.edu.jo</a>
+        </div>
+
+        <div class="contact-card">
+          <h4><i class="fab fa-linkedin"></i> LinkedIn</h4>
+          <p>للتواصل المهني ومتابعة المسار والشهادات:</p>
+          <a href="https://www.linkedin.com/in/mohamad-al-shlool-1855332b8/" target="_blank" rel="noopener">
+            linkedin.com/in/mohamad-al-shlool-1855332b8
+          </a>
+        </div>
+
+        <div class="contact-card">
+          <h4><i class="fas fa-globe"></i> Portfolio</h4>
+          <p>الملف الشخصي والموقع الأساسي:</p>
+          <a href="https://mohamad-alshlool03.github.io/mohamadalshlool.github.io" target="_blank" rel="noopener">
+            mohamad-alshlool03.github.io/mohamadalshlool.github.io
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- مجالات التعاون -->
+    <section class="card">
+      <h3><i class="fas fa-handshake"></i> مجالات التعاون / الاهتمام</h3>
+
+      <div class="focus-grid">
+        <div class="focus-box">
+          <h4><i class="fas fa-shield-virus"></i> الأمن السيبراني (الأولوية)</h4>
+          <ul>
+            <li>فرص تدريب عملي في الأمن السيبراني</li>
+            <li>العمل ضمن فرق تقنية للتعلّم والتطبيق</li>
+            <li>تطوير المهارات في اختبار الاختراق وتقييم الثغرات</li>
+            <li>المشاركة في مشاريع أو مبادرات تقنية تعليمية/تطبيقية</li>
+          </ul>
+        </div>
+
+        <div class="focus-box">
+          <h4><i class="fas fa-code"></i> تطوير مواقع الويب (مهارة داعمة)</h4>
+          <ul>
+            <li>تصميم وتطوير مواقع تعريفية وخدمية</li>
+            <li>واجهات متجاوبة باستخدام HTML / CSS / JavaScript</li>
+            <li>نشر المشاريع عبر GitHub Pages</li>
+            <li>تطوير صفحات شركات / مراكز / منصات تعليمية / مطاعم</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- نموذج تواصل سريع (بدون باك-إند) -->
+    <section class="card">
+      <h3><i class="fas fa-message"></i> نموذج تواصل سريع</h3>
+      <p class="mini-note">
+        هذا النموذج يفتح رسالة جاهزة على البريد/واتساب (بدون خادم). إذا فضّلت، استخدم الروابط المباشرة أعلاه.
+      </p>
+
+      <form id="quickContactForm" class="quick-form">
+        <div class="row2">
+          <input type="text" id="name" placeholder="الاسم" required />
+          <input type="text" id="contactInfo" placeholder="رقم الهاتف أو البريد للتواصل معك" required />
+        </div>
+
+        <div class="row2">
+          <select id="topic" required>
+            <option value="">اختر نوع الاستفسار</option>
+            <option>فرصة تدريب (أمن سيبراني)</option>
+            <option>تعاون تقني / مشروع</option>
+            <option>طلب تطوير موقع ويب</option>
+            <option>استفسار عام</option>
+          </select>
+          <input type="text" id="company" placeholder="الجهة / الشركة (اختياري)" />
+        </div>
+
+        <textarea id="message" placeholder="اكتب تفاصيل رسالتك هنا..." required></textarea>
+
+        <div class="form-actions">
+          <button type="button" class="btn" id="sendEmailBtn">
+            <i class="fas fa-envelope"></i> إرسال عبر البريد
+          </button>
+
+          <button type="button" class="btn btn-outline" id="sendWhatsappBtn">
+            <i class="fab fa-whatsapp"></i> إرسال عبر واتساب
+          </button>
+
+          <a class="btn btn-outline" href="mailto:mshlool684@gmail.com">
+            <i class="fas fa-paper-plane"></i> بريد مباشر
+          </a>
+        </div>
+      </form>
+    </section>
+
+    <!-- روابط سوشيال -->
+    <section class="card">
+      <h3><i class="fas fa-share-nodes"></i> وسائل التواصل الاجتماعي</h3>
+
+      <div class="social-links">
+        <a href="https://www.instagram.com/shlool_web/" target="_blank" rel="noopener">
+          <i class="fab fa-instagram"></i> Instagram
+        </a>
+
+        <a href="https://web.facebook.com/profile.php?id=61581103335990" target="_blank" rel="noopener">
+          <i class="fab fa-facebook"></i> Facebook
+        </a>
+
+        <a href="https://mohamad-alshlool03.github.io/Shlool-Web/" target="_blank" rel="noopener">
+          <i class="fas fa-globe"></i> الطلب عبر موقع Shlool Web
+        </a>
+      </div>
+    </section>
+
+    <!-- ملاحظة -->
+    <section class="card">
+      <h3><i class="fas fa-circle-info"></i> ملاحظة</h3>
+      <div class="helper-box">
+        أفضل طريقة لتسريع الرد:
+        <ul>
+          <li>حدد نوع الطلب (تدريب / مشروع / موقع ويب / استفسار عام)</li>
+          <li>اذكر الجهة أو المجال إن وجد</li>
+          <li>اكتب المطلوب بشكل مختصر وواضح</li>
+          <li>أرفق وسيلة مناسبة للتواصل معك (رقم/إيميل)</li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">نبذة</a> •
+      <a href="Portfolio.html">الأعمال</a> •
+      <a href="contact.html">التواصل</a>
+    </div>
+
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/mohamad-al-shlool-1855332b8/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://wa.me/962790986908" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:mshlool684@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://mohamad-alshlool03.github.io/mohamadalshlool.github.io" target="_blank" rel="noopener" aria-label="Portfolio"><i class="fas fa-globe"></i></a>
+    </div>
+
+    <p class="hint">محمد خالد أحمد الشلول — طالب أمن سيبراني (سنة رابعة) | مطور مواقع ويب</p>
+    <p>&copy; 2026 محمد خالد الشلول. جميع الحقوق محفوظة.</p>
+
+    <div class="dev-credit">
+      <span>مع أطيب التحيات 🌷 <strong>محمد خالد الشلول</strong></span>
+      <a class="wa" href="https://wa.me/962790986908" target="_blank" rel="noopener" aria-label="واتساب محمد">
+        <i class="fab fa-whatsapp"></i> <b>0790&nbsp;986&nbsp;908</b>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    // Theme toggle (مثل باقي الصفحات)
+    (function () {
+      const KEY = "theme";
+      const html = document.documentElement;
+      const saved = localStorage.getItem(KEY);
+      if (saved === "dark") html.setAttribute("data-theme", "dark");
+
+      const btn = document.getElementById("themeToggle");
+      if (btn) {
+        btn.addEventListener("click", function () {
+          const isDark = html.getAttribute("data-theme") === "dark";
+          html.setAttribute("data-theme", isDark ? "light" : "dark");
+          localStorage.setItem(KEY, isDark ? "light" : "dark");
+        });
+      }
+    })();
+
+    // نموذج سريع: تجهيز رسالة وإرسالها عبر البريد أو واتساب
+    (function () {
+      const nameEl = document.getElementById("name");
+      const contactEl = document.getElementById("contactInfo");
+      const topicEl = document.getElementById("topic");
+      const companyEl = document.getElementById("company");
+      const messageEl = document.getElementById("message");
+
+      function buildMessage() {
+        const name = (nameEl.value || "").trim();
+        const contact = (contactEl.value || "").trim();
+        const topic = (topicEl.value || "").trim();
+        const company = (companyEl.value || "").trim();
+        const message = (messageEl.value || "").trim();
+
+        if (!name || !contact || !topic || !message) {
+          alert("يرجى تعبئة: الاسم + وسيلة التواصل + نوع الاستفسار + الرسالة.");
+          return null;
+        }
+
+        return [
+          "السلام عليكم محمد،",
+          "",
+          "لدي استفسار جديد:",
+          "الاسم: " + name,
+          "وسيلة التواصل: " + contact,
+          "نوع الاستفسار: " + topic,
+          "الجهة/الشركة: " + (company || "غير مذكور"),
+          "",
+          "تفاصيل الرسالة:",
+          message
+        ].join("\n");
+      }
+
+      const sendEmailBtn = document.getElementById("sendEmailBtn");
+      const sendWhatsappBtn = document.getElementById("sendWhatsappBtn");
+
+      if (sendEmailBtn) {
+        sendEmailBtn.addEventListener("click", function () {
+          const body = buildMessage();
+          if (!body) return;
+
+          const subject = encodeURIComponent("استفسار جديد عبر موقعك - " + (topicEl.value || "عام"));
+          const emailBody = encodeURIComponent(body);
+          window.location.href = "mailto:mshlool684@gmail.com?subject=" + subject + "&body=" + emailBody;
+        });
+      }
+
+      if (sendWhatsappBtn) {
+        sendWhatsappBtn.addEventListener("click", function () {
+          const body = buildMessage();
+          if (!body) return;
+
+          const waText = encodeURIComponent(body);
+          window.open("https://wa.me/962790986908?text=" + waText, "_blank");
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
