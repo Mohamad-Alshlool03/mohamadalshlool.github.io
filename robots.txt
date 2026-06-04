@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://mohamad-alshlool03.github.io/mohamadalshlool.github.io/sitemap.xml
