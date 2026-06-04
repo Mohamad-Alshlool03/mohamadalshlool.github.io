@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>محمد خالد أحمد الشلول | أمن سيبراني + مطور مواقع ويب</title>
+  <meta name="description" content="محمد خالد الشلول - طالب أمن سيبراني سنة رابعة في جامعة العلوم والتكنولوجيا الأردنية (JUST)، حاصل على شهادات مهنية في الأمن السيبراني، ومطور مواقع ويب." />
+  <meta property="og:title" content="محمد خالد الشلول | أمن سيبراني + مطور مواقع ويب" />
+  <meta property="og:description" content="طالب أمن سيبراني (سنة رابعة) | مطور مواقع ويب | شهادات مهنية ودورات متخصصة" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://mohamad-alshlool03.github.io/mohamadalshlool.github.io/" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    html[dir="rtl"] body { font-family: "Segoe UI", Tahoma, Arial, sans-serif; }
+
+    .skip-link{
+      position:absolute;inset-inline-start:8px;top:-44px;padding:8px 12px;background:#000;color:#fff;z-index:1000;border-radius:8px
+    }
+    .skip-link:focus{top:8px}
+
+    /* إلغاء إبراز Portfolio الافتراضي الموجود في style.css على هذه الصفحة */
+    header.hero .top-nav a[href*="Portfolio.html"]{
+      background:rgba(255,255,255,.14) !important;
+      color:#fff !important;
+      border-color:rgba(255,255,255,.25) !important;
+      font-weight:500 !important;
+      box-shadow:none !important;
+    }
+    /* إبراز الصفحة الحالية (index) */
+    header.hero .top-nav a[href="index.html"]{
+      background:#fff !important;
+      color:var(--brand) !important;
+      border-color:#fff !important;
+      font-weight:700;
+      box-shadow:0 6px 16px rgba(0,0,0,.12);
+    }
+
+    .hero-sub{
+      display:flex;gap:10px;flex-wrap:wrap;justify-content:center;align-items:center;margin-top:10px
+    }
+    .hero-badge{
+      display:inline-flex;align-items:center;gap:8px;
+      background:rgba(255,255,255,.14);
+      border:1px solid rgba(255,255,255,.25);
+      color:#fff;
+      padding:8px 12px;
+      border-radius:999px;
+      font-size:.95rem;
+    }
+
+    .hero-actions{
+      display:flex;align-items:center;gap:10px;justify-content:center;margin-top:14px;flex-wrap:wrap
+    }
+
+    .mini-note{
+      color:var(--ink-soft);
+      font-size:.92rem;
+      margin-top:8px;
+    }
+
+    .about-media{
+      display:grid;
+      grid-template-columns:160px 1fr;
+      gap:20px;
+      align-items:center;
+    }
+    .about-media .avatar{
+      width:160px;height:160px;border-radius:50%;object-fit:cover;border:3px solid var(--card-bg,#e5e7eb);
+      box-shadow:var(--shadow);
+    }
+
+    .info-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:12px;
+      margin-top:8px;
+    }
+    .info-item{
+      background:rgba(26,188,156,.06);
+      border:1px solid rgba(26,188,156,.18);
+      border-radius:12px;
+      padding:12px;
+    }
+    .info-item b{display:block;margin-bottom:4px}
+    .info-item a{word-break:break-word}
+
+    .chips{
+      display:flex;flex-wrap:wrap;gap:10px;margin-top:10px
+    }
+    .chips .chip-soft{
+      display:inline-flex;align-items:center;gap:8px;
+      background:#f3f7fb;
+      border:1px solid #dfe8f3;
+      color:#223;
+      padding:8px 12px;border-radius:999px;
+      text-decoration:none;
+      font-size:.95rem;
+    }
+    html[data-theme="dark"] .chips .chip-soft{
+      background:#0f1220;border-color:#2a3153;color:#e7eaf6;
+    }
+
+    .section-head{
+      display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap
+    }
+
+    .cert-list{
+      display:grid;
+      gap:14px;
+      margin-top:8px;
+    }
+    .cert-item{
+      border:1px solid #e5eaf2;
+      border-radius:14px;
+      padding:14px;
+      background:#fff;
+    }
+    html[data-theme="dark"] .cert-item{
+      background:#11162a;
+      border-color:#2a3153;
+    }
+    .cert-item h4{margin:.1rem 0 .35rem}
+    .cert-meta{
+      color:var(--ink-soft);
+      font-size:.95rem;
+      margin-bottom:6px;
+    }
+
+    .two-col{
+      display:grid;
+      grid-template-columns:1.05fr .95fr;
+      gap:16px;
+    }
+
+    .skill-groups{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
+    }
+    .skill-box{
+      border:1px solid #e6ecf3;border-radius:12px;padding:14px;background:#fff;
+    }
+    html[data-theme="dark"] .skill-box{
+      background:#11162a;border-color:#2a3153;
+    }
+    .skill-box h4{margin:.1rem 0 .6rem}
+    .skill-box ul{margin:0;padding-inline-start:18px}
+    .skill-box li{margin:.25rem 0}
+
+    .mini-projects{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:12px;
+      margin-top:10px;
+    }
+    .mini-project{
+      border:1px solid #e7edf5;
+      border-radius:12px;
+      padding:12px;
+      background:rgba(41,128,185,.03);
+    }
+    html[data-theme="dark"] .mini-project{
+      background:#11162a;
+      border-color:#2a3153;
+    }
+    .mini-project h4{margin:.1rem 0 .35rem;font-size:1rem}
+    .mini-project p{margin:.2rem 0;color:var(--ink-soft);font-size:.94rem}
+    .mini-project a{font-weight:600;word-break:break-all}
+
+    .social-links{
+      display:flex;gap:10px;flex-wrap:wrap;margin-top:10px
+    }
+    .social-links a{
+      display:inline-flex;align-items:center;gap:8px;
+      border:1px solid #dfe7f1;border-radius:999px;padding:8px 12px;text-decoration:none;
+      background:#fff;
+    }
+    html[data-theme="dark"] .social-links a{
+      background:#11162a;border-color:#2a3153;
+    }
+
+    .cta-wrap{
+      display:flex;gap:10px;flex-wrap:wrap;margin-top:10px
+    }
+
+    @media (max-width: 900px){
+      .two-col{grid-template-columns:1fr}
+      .skill-groups{grid-template-columns:1fr}
+    }
+    @media (max-width: 700px){
+      .about-media{grid-template-columns:1fr}
+      .info-grid{grid-template-columns:1fr}
+      .mini-projects{grid-template-columns:1fr}
+      .hero h1{font-size:1.6rem}
+      .hero h2{font-size:1rem}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">تخطّي إلى المحتوى</a>
+
+  <header class="hero">
+    <div class="container">
+      <h1><i class="fas fa-shield-halved"></i> محمد خالد أحمد الشلول</h1>
+      <h2>طالب أمن سيبراني (سنة رابعة) | مطور مواقع ويب</h2>
+
+      <div class="hero-sub">
+        <span class="hero-badge"><i class="fas fa-university"></i> جامعة العلوم والتكنولوجيا الأردنية (JUST)</span>
+        <span class="hero-badge"><i class="fas fa-graduation-cap"></i> متوقع التخرج: 2026</span>
+        <span class="hero-badge"><i class="fas fa-certificate"></i> eJPT v2 + Azure AI Fundamentals + Cisco Ethical Hacker</span>
+      </div>
+
+      <div class="hero-actions">
+        <button id="themeToggle" class="btn btn-outline" type="button">
+          <i class="fas fa-moon"></i> تبديل الثيم
+        </button>
+        <a class="btn" href="Portfolio.html"><i class="fas fa-code"></i> أعمال مواقع الويب</a>
+        <a class="btn btn-outline" href="contact.html"><i class="fas fa-paper-plane"></i> تواصل معي</a>
+      </div>
+
+      <nav class="top-nav" aria-label="Main Navigation" style="margin-top:16px">
+        <a href="index.html"><i class="fas fa-user"></i> نبذة</a>
+        <a href="Portfolio.html"><i class="fas fa-briefcase"></i> الأعمال</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i> التواصل</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+
+    <!-- نبذة -->
+    <section class="card">
+      <h3><i class="fas fa-id-card"></i> نبذة مختصرة</h3>
+
+      <div class="about-media">
+        <img
+          class="avatar"
+          src="personal.jpg"
+          alt="صورة محمد خالد الشلول"
+          loading="eager"
+          decoding="async"
+          onerror="
+            if(!this.dataset.fallback){
+              this.dataset.fallback=1;
+              this.src=this.src.replace('.jpg','.png');
+            } else if(this.dataset.fallback==='1'){
+              this.dataset.fallback=2;
+              this.src=this.src.replace('.png','.webp');
+            } else {
+              this.onerror=null;
+              this.style.display='none';
+            }
+          "
+        />
+
+        <div>
+          <p>
+            طالب أمن سيبراني في السنة الرابعة بجامعة العلوم والتكنولوجيا الأردنية، مهتم ببناء أساس قوي في
+            الأمن السيبراني واختبار الاختراق، مع اهتمام عملي بتطوير مواقع الويب.
+          </p>
+          <p>
+            حاصل على شهادات مهنية ودورات متخصصة في الأمن السيبراني والذكاء الاصطناعي، وأسعى لتطبيق ما تعلمته
+            في التدريب العملي والمشاريع الواقعية.
+          </p>
+
+          <div class="chips">
+            <span class="chip-soft"><i class="fas fa-bug"></i> أساسيات اختبار الاختراق</span>
+            <span class="chip-soft"><i class="fas fa-network-wired"></i> أساسيات الشبكات</span>
+            <span class="chip-soft"><i class="fas fa-code"></i> HTML / CSS / JavaScript</span>
+            <span class="chip-soft"><i class="fab fa-github"></i> GitHub Pages</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- معلومات أساسية -->
+    <section class="card">
+      <div class="section-head">
+        <h3 style="margin:0"><i class="fas fa-address-book"></i> المعلومات الأساسية</h3>
+        <a class="btn btn-outline" href="contact.html"><i class="fas fa-paper-plane"></i> صفحة التواصل</a>
+      </div>
+
+      <div class="info-grid">
+        <div class="info-item">
+          <b><i class="fas fa-phone"></i> الهاتف</b>
+          <a href="tel:0790986908">0790986908</a>
+        </div>
+
+        <div class="info-item">
+          <b><i class="fas fa-envelope"></i> البريد الشخصي</b>
+          <a href="mailto:mshlool684@gmail.com">mshlool684@gmail.com</a>
+        </div>
+
+        <div class="info-item">
+          <b><i class="fas fa-envelope-open-text"></i> البريد الجامعي</b>
+          <a href="mailto:mkalshlool21@cit.just.edu.jo">mkalshlool21@cit.just.edu.jo</a>
+        </div>
+
+        <div class="info-item">
+          <b><i class="fab fa-linkedin"></i> LinkedIn</b>
+          <a href="https://www.linkedin.com/in/mohamad-al-shlool-1855332b8/" target="_blank" rel="noopener">
+            linkedin.com/in/mohamad-al-shlool-1855332b8
+          </a>
+        </div>
+
+        <div class="info-item">
+          <b><i class="fas fa-globe"></i> Portfolio</b>
+          <a href="https://mohamad-alshlool03.github.io/mohamadalshlool.github.io" target="_blank" rel="noopener">
+            mohamad-alshlool03.github.io/mohamadalshlool.github.io
+          </a>
+        </div>
+
+        <div class="info-item">
+          <b><i class="fas fa-briefcase"></i> الاهتمام المهني</b>
+          فرص تدريب وعمل تجمع بين الأمن السيبراني والتطبيق العملي وتطوير الويب
+        </div>
+      </div>
+    </section>
+
+    <!-- التعليم + المهارات بشكل جانبي -->
+    <section class="two-col">
+      <section class="card">
+        <h3><i class="fas fa-university"></i> التعليم</h3>
+        <h4 style="margin:.2rem 0 .4rem">بكالوريوس أمن سيبراني — جامعة العلوم والتكنولوجيا الأردنية (JUST)</h4>
+        <p class="mini-note" style="margin-top:0">الحالة: قيد الدراسة (سنة رابعة) — متوقع التخرج: 2026</p>
+
+        <hr style="border:none;border-top:1px solid #e5e7eb;margin:14px 0">
+
+        <h4 style="margin:.2rem 0 .4rem"><i class="fas fa-bullseye"></i> الهدف الحالي</h4>
+        <p>
+          تطوير خبرة عملية في الأمن السيبراني (خصوصًا أساسيات اختبار الاختراق وتقييم الثغرات)،
+          مع الاستمرار في بناء مشاريع ويب واقعية تدعم الجانب العملي والمهني.
+        </p>
+      </section>
+
+      <section class="card">
+        <h3><i class="fas fa-toolbox"></i> المهارات (مختصرة)</h3>
+
+        <div class="skill-groups">
+          <div class="skill-box">
+            <h4><i class="fas fa-shield-virus"></i> الأمن السيبراني</h4>
+            <ul>
+              <li>أساسيات الأمن السيبراني</li>
+              <li>أساسيات اختبار الاختراق (Penetration Testing)</li>
+              <li>تقييم الثغرات والمفاهيم الأمنية الأساسية</li>
+              <li>أساسيات الشبكات</li>
+            </ul>
+          </div>
+
+          <div class="skill-box">
+            <h4><i class="fas fa-code"></i> تطوير الويب</h4>
+            <ul>
+              <li>HTML / CSS / JavaScript</li>
+              <li>تطوير واجهات مواقع ويب متجاوبة</li>
+              <li>تنظيم صفحات العرض الشخصي والخدمات</li>
+              <li>نشر المشاريع عبر GitHub Pages</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <!-- الشهادات المهنية (رئيسي) -->
+    <section class="card">
+      <h3><i class="fas fa-certificate"></i> الشهادات المهنية</h3>
+
+      <div class="cert-list">
+        <div class="cert-item">
+          <h4>eJPT v2 (Junior Penetration Tester) — INE Security</h4>
+          <div class="cert-meta">شهادة مهنية في أساسيات اختبار الاختراق والاستغلال العملي والتقييم الأمني</div>
+          <p style="margin:.2rem 0">
+            <strong>رابط التحقق:</strong>
+            <a href="https://certs.ine.com/91a4d002-770c-4bb4-84c6-e91b280b7f84#acc.ZMcafpJw" target="_blank" rel="noopener">
+              certs.ine.com (Verification)
+            </a>
+          </p>
+        </div>
+
+        <div class="cert-item">
+          <h4>Microsoft Certified: Azure AI Fundamentals — Microsoft</h4>
+          <div class="cert-meta">أساسيات الذكاء الاصطناعي على منصة Microsoft Azure</div>
+          <p style="margin:.2rem 0"><strong>Credential ID / Verification Code:</strong> FWSk-XMpE</p>
+        </div>
+
+        <div class="cert-item">
+          <h4>Ethical Hacker — Cisco Networking Academy (Cisco)</h4>
+          <div class="cert-meta">مفاهيم وأساسيات الاختراق الأخلاقي ضمن مسار أكاديمي/مهني من Cisco</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- الدورات -->
+    <section class="card">
+      <h3><i class="fas fa-chalkboard-teacher"></i> الدورات وورش العمل</h3>
+      <ul class="bullet" style="margin-top:8px">
+        <li><strong>Content Design Using AI Tools</strong> — (Robtna Space / Crown Prince Foundation)</li>
+        <li><strong>Automation & AI Agents Workshop</strong> — n8n Arabic Community</li>
+        <li><strong>Number Theory for Cryptography</strong> — جامعة العلوم والتكنولوجيا الأردنية (شهادة حضور)</li>
+        <li><strong>Cybersecurity Design Principles, Goals, and Architecture</strong> — جامعة العلوم والتكنولوجيا الأردنية (شهادة حضور)</li>
+      </ul>
+    </section>
+
+    <!-- الأعمال (مصغّرة وثانوية) -->
+    <section class="card">
+      <div class="section-head">
+        <h3 style="margin:0"><i class="fas fa-laptop-code"></i> نماذج من أعمال تطوير مواقع الويب (مختصرة)</h3>
+        <a class="btn" href="Portfolio.html"><i class="fas fa-eye"></i> عرض صفحة الأعمال كاملة</a>
+      </div>
+
+      <p class="mini-note">
+        أبقيت الأعمال موجودة هنا بشكل مختصر، بينما التركيز الرئيسي في الصفحة على الأمن السيبراني والشهادات.
+      </p>
+
+      <div class="mini-projects">
+        <div class="mini-project">
+          <h4>1) موقع شخصي / بورتفوليو</h4>
+          <p>عرض السيرة الذاتية والأعمال للأفراد والطلاب والمستقلين.</p>
+          <a href="https://mohamad-alshlool03.github.io/mohamadalshlool.github.io" target="_blank" rel="noopener">فتح الموقع</a>
+        </div>
+
+        <div class="mini-project">
+          <h4>2) موقع مركز علاج طبيعي (SCC)</h4>
+          <p>واجهة واضحة مع نموذج حجز مواعيد يرسل الطلبات للبريد الإلكتروني.</p>
+          <a href="https://mohamad-alshlool03.github.io/scc" target="_blank" rel="noopener">فتح الموقع</a>
+        </div>
+
+        <div class="mini-project">
+          <h4>3) موقع شركة استشارات هندسية (R E.C Safety)</h4>
+          <p>عرض خدمات وأهداف وباقات ونموذج تواصل/حجز سريع.</p>
+          <a href="https://mohamad-alshlool03.github.io/R-E.C-Safety" target="_blank" rel="noopener">فتح الموقع</a>
+        </div>
+
+        <div class="mini-project">
+          <h4>4) موقع خدمات (Shlool Web)</h4>
+          <p>منصة لطلب تصميم موقع إلكتروني بخطوات بسيطة وسهلة.</p>
+          <a href="https://mohamad-alshlool03.github.io/Shlool-Web" target="_blank" rel="noopener">فتح الموقع</a>
+        </div>
+
+        <div class="mini-project">
+          <h4>5) منصة تعليمية (كنز العلم)</h4>
+          <p>منصة تعليمية منظّمة لعرض الدروس والمحتوى الأكاديمي.</p>
+          <a href="https://mohamad-alshlool03.github.io/kanz" target="_blank" rel="noopener">فتح الموقع</a>
+        </div>
+
+        <div class="mini-project">
+          <h4>6) موقع مطعم فلافل</h4>
+          <p>تصميم بسيط وجذاب لعرض قائمة الطعام والعروض اليومية.</p>
+          <a href="https://mohamad-alshlool03.github.io/Falafel_resturant" target="_blank" rel="noopener">فتح الموقع</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- تواصل / CTA -->
+    <section class="card">
+      <h3><i class="fas fa-handshake"></i> فرص التدريب والعمل</h3>
+      <p>
+        مهتم بفرص التدريب والعمل التي تجمع بين الأمن السيبراني والتطبيق العملي. لدي أعمال فعلية في تصميم وتطوير
+        مواقع الويب يمكن الاطلاع عليها عبر رابط الـ Portfolio أو صفحة الأعمال.
+      </p>
+
+      <div class="cta-wrap">
+        <a class="btn" href="contact.html"><i class="fas fa-paper-plane"></i> تواصل معي</a>
+        <a class="btn btn-outline" href="https://wa.me/962790986908" target="_blank" rel="noopener">
+          <i class="fab fa-whatsapp"></i> واتساب
+        </a>
+        <a class="btn btn-outline" href="mailto:mshlool684@gmail.com">
+          <i class="fas fa-envelope"></i> البريد الشخصي
+        </a>
+      </div>
+
+      <div class="social-links">
+        <a href="https://www.instagram.com/shlool_web/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://web.facebook.com/profile.php?id=61581103335990" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="https://mohamad-alshlool03.github.io/Shlool-Web/" target="_blank" rel="noopener"><i class="fas fa-globe"></i> الطلب عبر الموقع</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">نبذة</a> •
+      <a href="Portfolio.html">الأعمال</a> •
+      <a href="contact.html">التواصل</a>
+    </div>
+
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/mohamad-al-shlool-1855332b8/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://wa.me/962790986908" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:mshlool684@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://mohamad-alshlool03.github.io/mohamadalshlool.github.io" target="_blank" rel="noopener" aria-label="Portfolio"><i class="fas fa-globe"></i></a>
+    </div>
+
+    <p class="hint">محمد خالد أحمد الشلول — طالب أمن سيبراني (سنة رابعة) | مطور مواقع ويب</p>
+    <p>&copy; 2026 محمد خالد الشلول. جميع الحقوق محفوظة.</p>
+
+    <div class="dev-credit">
+      <span>مع أطيب التحيات 🌷 <strong>محمد خالد الشلول</strong></span>
+      <a class="wa" href="https://wa.me/962790986908" target="_blank" rel="noopener" aria-label="واتساب محمد">
+        <i class="fab fa-whatsapp"></i> <b>0790&nbsp;986&nbsp;908</b>
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const KEY = "theme";
+      const html = document.documentElement;
+      const saved = localStorage.getItem(KEY);
+      if (saved === "dark") html.setAttribute("data-theme", "dark");
+
+      const btn = document.getElementById("themeToggle");
+      if (btn) {
+        btn.addEventListener("click", function () {
+          const isDark = html.getAttribute("data-theme") === "dark";
+          html.setAttribute("data-theme", isDark ? "light" : "dark");
+          localStorage.setItem(KEY, isDark ? "light" : "dark");
+        });
+      }
+    })();
+  </script>
+</body>
+</html>

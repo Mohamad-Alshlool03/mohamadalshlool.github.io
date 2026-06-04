@@ -1,0 +1,325 @@
+/* =========================
+   Global Reset + Variables
+   ========================= */
+:root{
+  --brand:#1abc9c;
+  --brand-2:#2980b9;
+  --ink:#17212b;
+  --ink-soft:#4b5563;
+  --bg:#f6f8fb;
+  --card-bg:#ffffff;
+  --border:#e6ecf3;
+  --shadow:0 10px 25px rgba(0,0,0,.08);
+
+  --radius:16px;
+  --radius-sm:12px;
+
+  --container:1100px;
+}
+
+html,body{height:100%}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+
+img{max-width:100%;display:block}
+a{color:inherit}
+p{margin:.5rem 0}
+h1,h2,h3,h4{margin:0 0 .6rem}
+
+/* =========================
+   Dark Theme
+   ========================= */
+html[data-theme="dark"]{
+  --ink:#eef2ff;
+  --ink-soft:#b7c1d6;
+  --bg:#0b1020;
+  --card-bg:#0f1426;
+  --border:#2a3153;
+  --shadow:0 14px 32px rgba(0,0,0,.35);
+}
+
+/* =========================
+   Layout
+   ========================= */
+.container{
+  width:min(var(--container), calc(100% - 32px));
+  margin-inline:auto;
+}
+
+main.container{
+  padding:22px 0 28px;
+}
+
+.card{
+  background:var(--card-bg);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:18px;
+  box-shadow:var(--shadow);
+  margin:14px 0;
+}
+
+.card h3{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:1.15rem;
+}
+
+.hint{
+  color:var(--ink-soft);
+  margin-top:8px;
+  font-size:.95rem;
+}
+
+/* =========================
+   Hero Header
+   ========================= */
+.hero{
+  position:relative;
+  padding:26px 0 20px;
+  background:
+    radial-gradient(1000px 360px at 50% -30%, rgba(255,255,255,.25), transparent 60%),
+    linear-gradient(135deg, var(--brand), var(--brand-2));
+  color:#fff;
+  overflow:hidden;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:auto -100px -120px auto;
+  width:340px;height:340px;
+  background:rgba(255,255,255,.12);
+  filter:blur(2px);
+  border-radius:50%;
+  transform:rotate(14deg);
+}
+
+.hero .container{position:relative;z-index:1}
+
+.hero h1{
+  font-size:2rem;
+  font-weight:800;
+  letter-spacing:.2px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  justify-content:center;
+  text-align:center;
+}
+
+.hero h2{
+  margin-top:8px;
+  font-size:1.05rem;
+  font-weight:500;
+  opacity:.95;
+  text-align:center;
+}
+
+/* =========================
+   Top Navigation
+   ========================= */
+.top-nav{
+  display:flex;
+  gap:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-top:12px;
+}
+
+.top-nav a{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:9px 12px;
+  border-radius:999px;
+  text-decoration:none;
+  background:rgba(255,255,255,.14);
+  border:1px solid rgba(255,255,255,.25);
+  color:#fff;
+  transition:transform .15s ease, background .2s ease, box-shadow .2s ease;
+}
+
+.top-nav a:hover{
+  transform:translateY(-1px);
+  background:rgba(255,255,255,.18);
+  box-shadow:0 10px 22px rgba(0,0,0,.12);
+}
+
+/* ملاحظة:
+   في الصفحات التي أعطيتك إياها:
+   يتم تفعيل الرابط الحالي عبر CSS inline داخل الصفحة
+   حتى ما نحتاج JS أو تغييرات إضافية هنا.
+*/
+
+/* =========================
+   Buttons
+   ========================= */
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:10px 14px;
+  border-radius:12px;
+  text-decoration:none;
+  border:1px solid transparent;
+  background:#ffffff;
+  color:var(--brand-2);
+  font-weight:800;
+  cursor:pointer;
+  box-shadow:0 10px 22px rgba(0,0,0,.12);
+  transition:transform .15s ease, box-shadow .2s ease, background .2s ease;
+}
+
+.btn:hover{
+  transform:translateY(-1px);
+  box-shadow:0 14px 26px rgba(0,0,0,.16);
+}
+
+.btn:active{transform:translateY(0)}
+
+.btn-outline{
+  background:transparent;
+  color:#fff;
+  border-color:rgba(255,255,255,.55);
+  box-shadow:none;
+}
+
+.btn-outline:hover{
+  background:rgba(255,255,255,.12);
+}
+
+/* داخل المحتوى (خارج الهيرو) نحتاج btn-outline يكون مناسب */
+main .btn-outline{
+  color:var(--ink);
+  border-color:var(--border);
+  background:transparent;
+}
+main .btn-outline:hover{
+  background:rgba(26,188,156,.06);
+  border-color:rgba(26,188,156,.25);
+}
+
+html[data-theme="dark"] main .btn-outline{
+  color:var(--ink);
+  border-color:var(--border);
+}
+
+/* =========================
+   Lists
+   ========================= */
+ul.bullet{
+  margin:.5rem 0 0;
+  padding-inline-start:18px;
+}
+ul.bullet li{margin:.35rem 0}
+
+/* =========================
+   Footer
+   ========================= */
+footer{
+  margin-top:20px;
+  padding:18px 0 26px;
+  background:linear-gradient(180deg, rgba(0,0,0,0), rgba(0,0,0,.04));
+}
+
+html[data-theme="dark"] footer{
+  background:linear-gradient(180deg, rgba(255,255,255,0), rgba(255,255,255,.03));
+}
+
+.footer-links{
+  text-align:center;
+  color:var(--ink-soft);
+  margin:6px 0 10px;
+}
+
+.footer-links a{
+  color:inherit;
+  text-decoration:none;
+  padding:0 6px;
+}
+.footer-links a:hover{color:var(--brand-2)}
+
+.footer-social{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:10px 0;
+}
+
+.footer-social a{
+  width:40px;height:40px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:999px;
+  text-decoration:none;
+  border:1px solid var(--border);
+  background:var(--card-bg);
+  box-shadow:var(--shadow);
+  transition:transform .15s ease;
+}
+.footer-social a:hover{transform:translateY(-2px)}
+
+footer p{
+  text-align:center;
+  margin:6px 0;
+  color:var(--ink-soft);
+}
+
+.dev-credit{
+  margin-top:12px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+  color:var(--ink-soft);
+}
+
+.dev-credit .wa{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  text-decoration:none;
+  padding:8px 12px;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background:var(--card-bg);
+  box-shadow:var(--shadow);
+}
+.dev-credit .wa:hover{border-color:rgba(26,188,156,.35)}
+
+/* =========================
+   Utilities
+   ========================= */
+hr{
+  border:none;
+  border-top:1px solid var(--border);
+  margin:14px 0;
+}
+
+/* Accessible focus */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible{
+  outline:3px solid rgba(26,188,156,.25);
+  outline-offset:2px;
+  border-radius:10px;
+}
+
+/* =========================
+   Responsive
+   ========================= */
+@media (max-width: 700px){
+  .hero{padding:22px 0 16px}
+  .card{padding:16px}
+  .btn{padding:10px 12px}
+}

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>أعمال تطوير الويب | محمد خالد الشلول</title>
+  <meta name="description" content="نماذج من أعمال محمد خالد الشلول في تصميم وتطوير مواقع الويب — مواقع شخصية، طبية، تعليمية، وخدمية." />
+
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    html[dir="rtl"] body { font-family: "Segoe UI", Tahoma, Arial, sans-serif; }
+
+    /* إبقاء إبراز Portfolio (موجود أصلاً في style.css) */
+    .hero-actions{
+      display:flex;align-items:center;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:12px
+    }
+
+    .intro-badges{
+      display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:10px
+    }
+    .intro-badges .badge{
+      display:inline-flex;align-items:center;gap:8px;
+      background:rgba(255,255,255,.14);
+      border:1px solid rgba(255,255,255,.25);
+      color:#fff;
+      padding:8px 12px;border-radius:999px;
+      font-size:.92rem;
+    }
+
+    .portfolio-note{
+      border:1px dashed rgba(26,188,156,.35);
+      background:rgba(26,188,156,.05);
+      border-radius:12px;
+      padding:12px;
+      margin-top:8px;
+    }
+
+    /* شبكة أعمال مصغّرة */
+    .web-grid{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:14px;
+    }
+    .web-card{
+      background:var(--card-bg);
+      border:1px solid #e7edf5;
+      border-radius:14px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+      display:flex;
+      flex-direction:column;
+    }
+    html[data-theme="dark"] .web-card{
+      border-color:#2a3153;
+    }
+
+    .web-thumb{
+      height:180px;
+      overflow:hidden;
+      background:#f2f6fb;
+      border-bottom:1px solid #e9eef5;
+    }
+    .web-thumb img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      transition:transform .35s ease;
+    }
+    .web-card:hover .web-thumb img{ transform:scale(1.04); }
+
+    .web-body{
+      padding:12px;
+      text-align:right;
+    }
+    .web-body h4{
+      margin:.1rem 0 .35rem;
+      font-size:1.02rem;
+    }
+    .web-body p{
+      margin:.25rem 0;
+      color:var(--ink-soft);
+      line-height:1.5;
+      font-size:.94rem;
+    }
+
+    .meta-row{
+      display:flex;gap:8px;flex-wrap:wrap;margin:.45rem 0 .6rem;
+    }
+    .meta-pill{
+      display:inline-flex;align-items:center;gap:6px;
+      border:1px solid #e2eaf3;
+      background:#fff;
+      border-radius:999px;
+      padding:6px 10px;
+      font-size:.85rem;
+      color:#334;
+    }
+    html[data-theme="dark"] .meta-pill{
+      background:#11162a;border-color:#2a3153;color:#dbe3ff;
+    }
+
+    .web-actions{
+      display:flex;gap:8px;flex-wrap:wrap;margin-top:auto;
+    }
+
+    .web-actions .btn,
+    .web-actions .btn-outline{
+      padding:8px 12px;
+      border-radius:10px;
+      font-size:.92rem;
+    }
+
+    .secondary-links{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:10px;
+      margin-top:10px;
+    }
+    .secondary-links a{
+      display:flex;align-items:center;justify-content:space-between;gap:10px;
+      border:1px solid #e3eaf3;
+      border-radius:12px;
+      padding:10px 12px;
+      text-decoration:none;
+      background:#fff;
+    }
+    html[data-theme="dark"] .secondary-links a{
+      background:#11162a;border-color:#2a3153;
+    }
+
+    .social-links{
+      display:flex;gap:10px;flex-wrap:wrap;margin-top:10px
+    }
+    .social-links a{
+      display:inline-flex;align-items:center;gap:8px;
+      border:1px solid #dfe7f1;border-radius:999px;padding:8px 12px;text-decoration:none;
+      background:#fff;
+    }
+    html[data-theme="dark"] .social-links a{
+      background:#11162a;border-color:#2a3153;
+    }
+
+    .small-help{
+      color:var(--ink-soft);
+      font-size:.92rem;
+      margin-top:6px;
+    }
+
+    @media (max-width: 900px){
+      .web-grid{grid-template-columns:1fr}
+      .secondary-links{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="container">
+      <h1><i class="fas fa-laptop-code"></i> أعمال تطوير الويب</h1>
+      <h2>نماذج عملية من المواقع التي قمت بتصميمها وتطويرها</h2>
+
+      <div class="intro-badges">
+        <span class="badge"><i class="fas fa-shield-halved"></i> التخصص الأساسي: الأمن السيبراني</span>
+        <span class="badge"><i class="fas fa-code"></i> مهارة داعمة قوية: تطوير مواقع الويب</span>
+        <span class="badge"><i class="fab fa-github"></i> النشر عبر GitHub Pages</span>
+      </div>
+
+      <div class="hero-actions">
+        <button id="themeToggle" class="btn btn-outline" type="button">
+          <i class="fas fa-moon"></i> تبديل الثيم
+        </button>
+        <a class="btn" href="contact.html"><i class="fas fa-paper-plane"></i> تواصل / طلب مشروع</a>
+        <a class="btn btn-outline" href="index.html"><i class="fas fa-arrow-right"></i> الرجوع للنبذة</a>
+      </div>
+
+      <nav class="top-nav" aria-label="Main Navigation" style="margin-top:16px">
+        <a href="index.html"><i class="fas fa-user"></i> نبذة</a>
+        <a href="Portfolio.html"><i class="fas fa-briefcase"></i> الأعمال</a>
+        <a href="contact.html"><i class="fas fa-envelope"></i> التواصل</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h3><i class="fas fa-info-circle"></i> ملاحظة تنظيمية</h3>
+      <div class="portfolio-note">
+        تركيزي المهني الرئيسي هو <strong>الأمن السيبراني</strong> والشهادات المهنية المرتبطة به، وهذه الصفحة تعرض
+        <strong>نماذج أعمال تطوير الويب</strong> كجزء عملي داعم لخبرتي التقنية.
+      </div>
+      <p class="small-help">
+        كل عميل جديد يساهم في تطوير خبرتي وتحسين جودة مشاريعي، ويمكن تكييف نفس الأفكار لتناسب قطاعات مختلفة
+        (طبي، تعليمي، مطاعم، خدمات، شركات).
+      </p>
+    </section>
+
+    <!-- المشاريع الرئيسية -->
+    <section class="card">
+      <h3><i class="fas fa-globe"></i> المشاريع (مواقع ويب)</h3>
+
+      <div class="web-grid">
+
+        <!-- 1 -->
+        <article class="web-card">
+          <div class="web-thumb">
+            <img src="assets/images/services/websites/websites.png" alt="موقع شخصي / بورتفوليو" loading="lazy">
+          </div>
+          <div class="web-body">
+            <h4>1) موقع شخصي / بورتفوليو</h4>
+            <p>
+              موقع احترافي مناسب للأفراد الراغبين في عرض سيرتهم الذاتية أو أعمالهم بشكل إلكتروني،
+              مثل الطلاب والمهندسين والمستقلين.
+            </p>
+            <div class="meta-row">
+              <span class="meta-pill"><i class="fas fa-user"></i> شخصي</span>
+              <span class="meta-pill"><i class="fas fa-mobile-screen"></i> متجاوب</span>
+              <span class="meta-pill"><i class="fab fa-github"></i> GitHub Pages</span>
+            </div>
+            <div class="web-actions">
+              <a class="btn" href="https://mohamad-alshlool03.github.io/mohamadalshlool.github.io" target="_blank" rel="noopener">
+                <i class="fas fa-up-right-from-square"></i> فتح الموقع
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2 -->
+        <article class="web-card">
+          <div class="web-thumb">
+            <img src="assets/images/services/websites/medical.png" alt="موقع مركز علاج طبيعي SCC" loading="lazy">
+          </div>
+          <div class="web-body">
+            <h4>2) موقع مركز علاج طبيعي (SCC)</h4>
+            <p>
+              موقع مخصص لمراكز العلاج الطبيعي والمراكز الطبية، بتصميم واضح وسهل الاستخدام، مع نظام
+              حجز مواعيد يرسل الطلبات مباشرة إلى البريد الإلكتروني.
+            </p>
+            <div class="meta-row">
+              <span class="meta-pill"><i class="fas fa-notes-medical"></i> طبي</span>
+              <span class="meta-pill"><i class="fas fa-calendar-check"></i> حجز مواعيد</span>
+              <span class="meta-pill"><i class="fas fa-envelope"></i> إرسال بريد</span>
+            </div>
+            <div class="web-actions">
+              <a class="btn" href="https://mohamad-alshlool03.github.io/scc" target="_blank" rel="noopener">
+                <i class="fas fa-up-right-from-square"></i> فتح الموقع
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="web-card">
+          <div class="web-thumb">
+            <img src="assets/images/services/websites/engineer.png" alt="موقع شركة R E.C Safety" loading="lazy">
+          </div>
+          <div class="web-body">
+            <h4>3) موقع شركة استشارات هندسية (R E.C Safety)</h4>
+            <p>
+              موقع لشركة متخصصة في الاستشارات بمجال السلامة والصحة المهنية، يتضمن تعريفاً بالخدمات،
+              عرض الأهداف، باقات بأسعار واضحة، ونموذج تواصل/حجز سريع.
+            </p>
+            <div class="meta-row">
+              <span class="meta-pill"><i class="fas fa-hard-hat"></i> هندسي</span>
+              <span class="meta-pill"><i class="fas fa-shield"></i> سلامة مهنية</span>
+              <span class="meta-pill"><i class="fas fa-list-check"></i> باقات وخدمات</span>
+            </div>
+            <div class="web-actions">
+              <a class="btn" href="https://mohamad-alshlool03.github.io/R-E.C-Safety" target="_blank" rel="noopener">
+                <i class="fas fa-up-right-from-square"></i> فتح الموقع
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="web-card">
+          <div class="web-thumb">
+            <img src="assets/images/services/websites/services_platform.png" alt="منصة خدمات Shlool Web" loading="lazy">
+          </div>
+          <div class="web-body">
+            <h4>4) موقع خدمات (Shlool Web)</h4>
+            <p>
+              منصة تتيح طلب تصميم موقع إلكتروني بخطوات بسيطة وسهلة، مع إمكانية التواصل المباشر
+              وطلب الخدمات عبر الموقع.
+            </p>
+            <div class="meta-row">
+              <span class="meta-pill"><i class="fas fa-store"></i> خدمات</span>
+              <span class="meta-pill"><i class="fas fa-paper-plane"></i> طلب مباشر</span>
+              <span class="meta-pill"><i class="fas fa-bolt"></i> واجهة بسيطة</span>
+            </div>
+            <div class="web-actions">
+              <a class="btn" href="https://mohamad-alshlool03.github.io/Shlool-Web" target="_blank" rel="noopener">
+                <i class="fas fa-up-right-from-square"></i> فتح الموقع
+              </a>
+              <a class="btn btn-outline" href="https://mohamad-alshlool03.github.io/Shlool-Web/" target="_blank" rel="noopener">
+                <i class="fas fa-cart-shopping"></i> رابط الطلب
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 5 -->
+        <article class="web-card">
+          <div class="web-thumb">
+            <img src="assets/images/services/websites/education.png" alt="منصة تعليمية كنز العلم" loading="lazy">
+          </div>
+          <div class="web-body">
+            <h4>5) منصة تعليمية (كنز العلم)</h4>
+            <p>
+              منصة تعليمية إلكترونية تعرض الدروس والمحتوى الأكاديمي بطريقة منظّمة وسهلة الاستخدام،
+              مناسبة للمدارس والمراكز التعليمية.
+            </p>
+            <div class="meta-row">
+              <span class="meta-pill"><i class="fas fa-graduation-cap"></i> تعليمي</span>
+              <span class="meta-pill"><i class="fas fa-layer-group"></i> تنظيم محتوى</span>
+              <span class="meta-pill"><i class="fas fa-display"></i> واجهة سهلة</span>
+            </div>
+            <div class="web-actions">
+              <a class="btn" href="https://mohamad-alshlool03.github.io/kanz" target="_blank" rel="noopener">
+                <i class="fas fa-up-right-from-square"></i> فتح الموقع
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- 6 -->
+        <article class="web-card">
+          <div class="web-thumb">
+            <img src="assets/images/services/websites/resturant.png" alt="موقع مطعم فلافل" loading="lazy">
+          </div>
+          <div class="web-body">
+            <h4>6) موقع مطعم </h4>
+            <p>
+              تصميم بسيط وجذّاب لعرض قائمة الطعام والعروض اليومية، مناسب للمطاعم والمقاهي الصغيرة
+              الراغبة في واجهة أنيقة وسهلة التصفح.
+            </p>
+            <div class="meta-row">
+              <span class="meta-pill"><i class="fas fa-utensils"></i> مطاعم</span>
+              <span class="meta-pill"><i class="fas fa-tags"></i> عروض يومية</span>
+              <span class="meta-pill"><i class="fas fa-mobile-screen-button"></i> واجهة عملية</span>
+            </div>
+            <div class="web-actions">
+              <a class="btn" href="https://mohamad-alshlool03.github.io/Falafel_resturant" target="_blank" rel="noopener">
+                <i class="fas fa-up-right-from-square"></i> فتح الموقع
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- روابط ثانوية للأعمال الأخرى -->
+    <section class="card">
+      <h3><i class="fas fa-layer-group"></i> أعمال أخرى (ثانوية)</h3>
+      <p class="small-help">
+        هذه الأعمال موجودة لكنها ليست محور العرض الرئيسي حاليًا، ويمكن إبرازها عند الحاجة حسب نوع العميل.
+      </p>
+
+      <div class="secondary-links">
+        <a href="services/logo-design.html">
+          <span><i class="fas fa-pen-nib"></i> تصميم شعارات</span>
+          <i class="fas fa-arrow-left"></i>
+        </a>
+        <a href="services/social-posts.html">
+          <span><i class="fas fa-image"></i> منشورات سوشيال ميديا</span>
+          <i class="fas fa-arrow-left"></i>
+        </a>
+        <a href="services/business-cards.html">
+          <span><i class="fas fa-id-card"></i> بطاقات أعمال</span>
+          <i class="fas fa-arrow-left"></i>
+        </a>
+        <a href="services/powerpoint.html">
+          <span><i class="fas fa-file-powerpoint"></i> عروض PowerPoint</span>
+          <i class="fas fa-arrow-left"></i>
+        </a>
+        <a href="services/arabic-articles.html">
+          <span><i class="fas fa-pen"></i> كتابة مقالات عربية</span>
+          <i class="fas fa-arrow-left"></i>
+        </a>
+        <a href="index.html">
+          <span><i class="fas fa-shield-halved"></i> العودة لصفحة الأمن السيبراني والشهادات</span>
+          <i class="fas fa-arrow-left"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="card">
+      <h3><i class="fas fa-comments"></i> تواصل معي للاستفسار أو طلب مشروع</h3>
+      <p>
+        يسعدني أن أشاركك نماذج إضافية، أو أساعدك في تطوير موقع مناسب لنشاطك (شخصي / طبي / تعليمي / خدمات / مطاعم).
+      </p>
+
+      <div class="hero-actions" style="justify-content:flex-start">
+        <a class="btn" href="contact.html"><i class="fas fa-paper-plane"></i> صفحة التواصل</a>
+        <a class="btn btn-outline" href="https://wa.me/962790986908" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> واتساب</a>
+        <a class="btn btn-outline" href="mailto:mshlool684@gmail.com"><i class="fas fa-envelope"></i> البريد الشخصي</a>
+      </div>
+
+      <div class="social-links">
+        <a href="https://www.instagram.com/shlool_web/" target="_blank" rel="noopener"><i class="fab fa-instagram"></i> Instagram</a>
+        <a href="https://web.facebook.com/profile.php?id=61581103335990" target="_blank" rel="noopener"><i class="fab fa-facebook"></i> Facebook</a>
+        <a href="https://mohamad-alshlool03.github.io/Shlool-Web/" target="_blank" rel="noopener"><i class="fas fa-globe"></i> الطلب عبر الموقع</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="index.html">نبذة</a> •
+      <a href="Portfolio.html">الأعمال</a> •
+      <a href="contact.html">التواصل</a>
+    </div>
+
+    <div class="footer-social">
+      <a href="https://www.linkedin.com/in/mohamad-al-shlool-1855332b8/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+      <a href="https://wa.me/962790986908" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="mailto:mshlool684@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://mohamad-alshlool03.github.io/mohamadalshlool.github.io" target="_blank" rel="noopener" aria-label="Portfolio"><i class="fas fa-globe"></i></a>
+    </div>
+
+    <p class="hint">مع أطيب التحيات 🌷 محمد خالد الشلول — 0790986908</p>
+    <p>&copy; 2026 محمد خالد الشلول. جميع الحقوق محفوظة.</p>
+  </footer>
+
+  <script>
+    (function () {
+      const KEY = "theme";
+      const html = document.documentElement;
+      const saved = localStorage.getItem(KEY);
+      if (saved === "dark") html.setAttribute("data-theme", "dark");
+
+      const btn = document.getElementById("themeToggle");
+      if (btn) {
+        btn.addEventListener("click", function () {
+          const isDark = html.getAttribute("data-theme") === "dark";
+          html.setAttribute("data-theme", isDark ? "light" : "dark");
+          localStorage.setItem(KEY, isDark ? "light" : "dark");
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
